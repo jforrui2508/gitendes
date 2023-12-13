@@ -1,18 +1,9 @@
 # EjemploAuth
 
-Este es un proyecto de ejemplo que muestra cómo implementar la autenticación en una aplicación web utilizando [nombre del framework/tecnología que estás utilizando].
-
 ## Características
 
 - Registro de usuarios
 - Inicio de sesión de usuarios
-- [Otras características importantes]
-
-## Requisitos previos
-
-Antes de comenzar, asegúrate de tener instalado lo siguiente:
-
-- [Lista de requisitos previos, por ejemplo, Node.js, npm, Java, etc.]
 
 ## Configuración
 
@@ -20,12 +11,10 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
   git clone git@github.com:profeInformatica101/EjemploAuth.git
 2. Navega al directorio del proyecto:
   cd EjemploAuth
-3. [Instrucciones adicionales de configuración, como la configuración de la base de datos, variables de entorno, etc.]
 
 ## Uso
 
 1. Inicia la aplicación:
-
 
 2. Abre tu navegador y visita [http://localhost:puerto] para comenzar a utilizar la aplicación.
 
