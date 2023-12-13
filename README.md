@@ -5,19 +5,6 @@
 - Registro de usuarios
 - Inicio de sesión de usuarios
 
-## Configuración
-
-1. Clona este repositorio en tu máquina local:
-  git clone git@github.com:profeInformatica101/EjemploAuth.git
-2. Navega al directorio del proyecto:
-  cd EjemploAuth
-
-## Uso
-
-1. Inicia la aplicación:
-
-2. Abre tu navegador y visita [http://localhost:puerto] para comenzar a utilizar la aplicación.
-
 ## Contribución
 
 Si deseas contribuir a este proyecto, sigue estos pasos:
