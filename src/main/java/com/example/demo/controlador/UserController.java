@@ -1,15 +1,12 @@
 package com.example.demo.controlador;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Slice;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,7 +18,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.dto.UsuarioDTO;
 import com.example.demo.entidad.Comentario;
@@ -71,7 +67,7 @@ public class UserController {
      * #######################	 
      */
     //Obtener { Comentarios }
-    PageRequest pageRequest = PageRequest.of(page, size);
+    PageRequest pageRequest = PageRequest.of(page, size,Sort.by("fechaCreacion").descending());
     Page<Comentario> comentarios = null;
 
     // Manejar errores si username o palabraClave son nulos o vacíos
@@ -92,18 +88,9 @@ public class UserController {
         comentarios = comentariosServicio.listarTodos(pageRequest);
         System.out.println("#COMENTARIOS TOTALES: " + comentarios);
     }
-        int currentPage = page;
-        int startPage = Math.max(0, currentPage - 2);
-        int endPage = currentPage + 2; // Asume un rango fijo de páginas alrededor de la página actual
-
-        model.addAttribute("startPage", startPage);
-        model.addAttribute("endPage", endPage);
-        model.addAttribute("comentarios", comentarios.getContent());
+    
+        model.addAttribute("comentarios", comentarios);
         model.addAttribute("requestURI", request.getRequestURI());
-        model.addAttribute("hasNext", comentarios.hasNext());
-        model.addAttribute("hasPrevious", comentarios.hasPrevious());
-        model.addAttribute("currentPage", currentPage);
-        
 
         return HOME; // Muestra la página específica del usuario (user.html)
     }
