@@ -1,9 +1,10 @@
 # EjemploAuth
 
 ## Características
-
-- Registro de usuarios
 - Inicio de sesión de usuarios
+- Agregar comentarios
+- Filtrar comentarios
+- Buscar palabras clave en comentarios
 
 ## Contribución
 
