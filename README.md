@@ -1,5 +1,7 @@
 # EjemploAuth
 
+Cambio en el ReadMe
+
 ## Características
 - Inicio de sesión de usuarios
 - Agregar comentarios
